@@ -1,0 +1,196 @@
+/* politica.css - estilos específicos de esta página */
+
+
+/* ===== Migrado desde <style> inline en politica.php (2026-02-26 18:39) ===== */
+/* puro termino y condiciones */
+
+  
+
+    /* Contenedor principal */
+    .service-section {
+      background-color: #9b92929a;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(45deg, rgba(113, 6, 6, 1), rgba(250, 43, 43, 1), rgba(146, 15, 15, 1));
+    }
+
+   
+
+    
+
+    /* Cajas de información */
+    .icon-box {
+      background-color: #f8f9fa;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .icon-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-box i {
+      font-size: 2.5rem;
+      color: #dc3545;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-box:hover i {
+      transform: scale(1.1);
+    }
+
+    .icon-box h2 {
+      font-size: 1.6rem;
+      color: #2d3436;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+ .icon-box p {
+      font-size: 1rem;
+      color: #000000ff;
+      font-weight: 550;
+      margin-bottom: 1px;
+    }
+
+    .icon-box  {
+      font-size: 1rem;
+      color: #000000ff;
+      font-weight: 550;
+      margin-bottom: 1px;
+    }
+    
+  
+
+   
+
+    /* Ajustes para tabletas */
+    @media (max-width: 768px) {
+      .service-section {
+        padding: 20px;
+      }
+
+      .service-section h1 {
+        font-size: 2rem;
+      }
+
+      .icon-box h2 {
+        font-size: 1.4rem;
+      }
+    }
+  
+    /* Fin de termino y condiciones */
+
+
+
+    /* separador */
+    .separador {
+      border-top: 1px solid #cccccc05;
+      margin: 60px 0;
+    }
+
+    /* estilo de nav bar */
+    .navbar-custom {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .navbar-brand img {
+      height: 2rem;
+      transition: height 0.7s ease;
+    }
+
+    .navbar-scrolled .navbar-brand img {
+      height: 35px;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .clo {
+      color: #ffc107;
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+
+
+
+    /* Variables de colores - modo claro por defecto */
+    :root {
+      --clr-bg: rgba(202, 193, 193, 0.75);
+      --clr-text: rgb(0, 0, 0);
+      --clr-primary: rgb(172, 25, 25);
+
+
+      --clr-dropdown-bg: rgb(255, 255, 255);
+    }
+
+    /* Modo oscuro: sobreescribe variables */
+    .dark-mode {
+      --clr-bg: #121212;
+      --clr-text: #ffffff;
+      --clr-primary: rgb(231, 47, 47);
+      --clr-secondary: rgb(255, 255, 255);
+      --clr-navbar-bg: linear-gradient(90deg, hsla(0, 10.30%, 22.70%, 0.00) 0%, rgba(33, 37, 41, 0) 100%);
+      --clr-dropdown-bg: rgb(255, 255, 255);
+    }
+
+    /* color debajo de parlax */
+    #about .bg-light {
+      background-color: hsla(0, 76.80%, 27.10%, 0.79) !important;
+    }
+
+    /* opaques y que se vean la nav bar */
+    body {
+      /* pantalla cambio de color */
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+    }
+
+    .navbar-custom {
+      /* nav convertir en transparente */
+      background: var(--clr-navbar-bg) !important;
+    }
+
+    /* terminos y condiciones  */
+    .gradient-text {
+      background: -webkit-linear-gradient(45deg, rgba(254, 5, 5, 1), rgba(127, 3, 3, 1));
+    
+      -webkit-text-fill-color: transparent;
+      font-size: 45px;
+    }

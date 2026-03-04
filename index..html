@@ -1,0 +1,207 @@
+<?php $pageCss = 'inicio'; ?>
+<!doctype html>
+<html lang="es">
+<?php include __DIR__ . '/partials/head.php'; ?>
+<body>
+  <?php include __DIR__ . '/partials/navbar.php'; ?>
+
+  <!-- Sección de héroe con efecto parallax -->
+    <section class="hero">
+      <div class="hero-content">
+        <!-- Título principal con animación AOS -->
+        <h1 data-aos="fade-up" data-aos-delay="200">Sistemas Automáticos e Instrumentación</h1>
+        <!-- Descripción breve con animación AOS -->
+        <!-- <p data-aos="fade-up" data-aos-delay="200"> Tecnología que Transforma</p> -->
+      </div>
+    </section>
+  
+
+  <!-- Sección de información numérica -->
+  <div id="about">
+    <div class="bg-white">
+      <div class="py-3 bg-light">
+        <div class="container py-5">
+          <div class="row g-4">
+            <!-- Estadística: Años de experiencia -->
+            <div class="col-lg-2 col-md-6 col-12 text-center">
+              <h1 class="fw-bold text-primary pb-2 display-1">+15</h1>
+              <h3 class="fw-bold">Años de experiencia</h3>
+            </div>
+            <!-- Estadística: Miembros del equipo -->
+            <div class="col-lg-3 col-md-6 col-12 text-center">
+              <h1 class="fw-bold text-primary pb-2 display-1">+57</h1>
+              <h3 class="fw-bold">Miembros del equipo</h3>
+            </div>
+            <!-- Estadística: Clientes satisfechos -->
+            <div class="col-lg-3 col-md-6 col-12 text-center">
+              <h1 class="fw-bold text-primary pb-2 display-1">+98</h1>
+              <h3 class="fw-bold">Clientes satisfechos</h3>
+            </div>
+            <!-- Estadística: Ciudades visitadas -->
+            <div class="col-lg-3 col-md-6 col-12 text-center">
+              <h1 class="fw-bold text-primary pb-2 display-1">+9</h1>
+              <h3 class="fw-bold">Ciudades viajadas</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Separador visual entre secciones -->
+  <div class="separador"></div>
+
+  <!-- Sección de filosofía organizacional -->
+  <section class="section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-12 ruling-2 mb-12">
+        <!-- Parte izquierda: Descripción de la filosofía -->
+        <div class="md:w-1/2">
+          <p class="text-gray-500 uppercase text-sm mb-4" data-aos="fade-up">[ Principal ]</p>
+          <h2 class="text-5xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Filosofía de la organización</h2>
+          <p class="text-2xl text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            Somos una empresa entusiasta e innovadora.
+          </p>
+        </div>
+        <!-- Parte derecha: Tarjetas de misión, visión y objetivos -->
+        <div class="md:w-1/2 grid grid-cols-1 gap-8">
+          <!-- Tarjeta de misión -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-rocket principle-icon"></i>
+            <h3 class="principle-title">Misión</h3>
+            <p class="text-3xl">
+              Proveer soluciones integrales de alta calidad, buscando siempre la satisfacción total del cliente.
+            </p>
+          </div>
+          <!-- Tarjeta de visión -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-eye principle-icon"></i>
+            <h3 class="principle-title">Visión</h3>
+            <p class="text-3xl">
+              Ser una empresa líder a nivel nacional, brindando servicios 360° en ingeniería.
+            </p>
+          </div>
+          <!-- Tarjeta de objetivos -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-bolt principle-icon"></i>
+            <h3 class="principle-title">Objetivos</h3>
+            <p class="text-3xl">
+              Contribuir al crecimiento de nuestros clientes con sistemas robustos y enfoque en la mejora continua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de galería rotativa (carrusel) -->
+  <section class="section carousel-section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-12 ruling-2 mb-12">
+        <!-- Parte izquierda: Título y descripción -->
+        <div class="md:w-1/2">
+          <p class="text-gray-500 uppercase text-sm mb-4" data-aos="fade-up">[ Segundo ]</p>
+          <h2 class="text-5xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Fotos</h2>
+          <p class="text-2xl text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            Somos una empresa entusiasta e innovadora.
+          </p>
+        </div>
+        <!-- Parte derecha: Carrusel de imágenes -->
+        <div class="md:w-1/2">
+          <div id="principleCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Elemento activo del carrusel -->
+              <div class="carousel-item active">
+                <div class="carousel-principle-card" data-aos="fade-up" data-aos-delay="300">
+                  <div class="card-content">
+                    <img src="assets/img/sai2.png" alt="Imagen de Misión" class="carousel-image" data-height="350"
+                      data-width="100%">
+                    <i class="fas fa-rocket principle-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Segundo elemento del carrusel -->
+              <div class="carousel-item">
+                <div class="carousel-principle-card" data-aos="fade-up" data-aos-delay="400">
+                  <div class="card-content">
+                    <img src="assets/img/sai2.png" alt="Imagen de Visión" class="carousel-image" data-height="320"
+                      data-width="110%">
+                    <i class="fas fa-eye principle-icon"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Tercer elemento del carrusel -->
+              <div class="carousel-item">
+                <div class="carousel-principle-card" data-aos="fade-up" data-aos-delay="500">
+                  <div class="card-content">
+                    <img src="assets/img/sai2.png" alt="Imagen de Objetivos" class="carousel-image" data-height="340"
+                      data-width="105%">
+                    <i class="fas fa-bolt principle-icon"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Controles de navegación del carrusel (anterior) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#principleCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <!-- Controles de navegación del carrusel (siguiente) -->
+            <button class="carousel-control-next" type="button" data-bs-target="#principleCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            <!-- Indicadores del carrusel -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#principleCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Diapositiva 1"></button>
+              <button type="button" data-bs-target="#principleCarousel" data-bs-slide-to="1"
+                aria-label="Diapositiva 2"></button>
+              <button type="button" data-bs-target="#principleCarousel" data-bs-slide-to="2"
+                aria-label="Diapositiva 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador visual entre secciones -->
+  <div class="separador"></div>
+
+  <!-- Sección de cotización -->
+  <section class="section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-12">
+        <!-- Parte izquierda: Título y descripción -->
+        <div class="md:w-1/2">
+          <p class="text-gray-500 uppercase text-sm mb-4" data-aos="fade-up">[ Tercero ]</p>
+          <h2 class="text-5xl font-bold mb-6 .gradient-text fw-bold" data-aos="fade-up" data-aos-delay="100">Realiza una
+            cotización con nosotros</h2>
+          <p class="text-2xl text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            Somos una empresa entusiasta e innovadora.
+          </p>
+        </div>
+        <!-- Parte derecha: Botón de cotización -->
+        <div class="md:w-1/2 flex justify-center">
+          <div class="principle-card flex flex-col items-center justify-center text-center" data-aos="fade-up"
+            data-aos-delay="300">
+            <a href="#cotizar" class="btn btn-quote text-lg py-7 px-6 mt-4" data-aos="zoom-in"
+              data-aos-delay="400">Cotizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador visual entre secciones -->
+  <div class="separador"></div>
+
+
+<!-- class="text-3xl"> -->
+<?php include __DIR__ . '/partials/footer.php'; ?>
+  <?php include __DIR__ . '/partials/scripts.php'; ?>
+</body>
+</html>

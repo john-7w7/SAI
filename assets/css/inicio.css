@@ -1,0 +1,999 @@
+/* inicio.css
+   Estilos SOLO para la página Inicio.
+   Lo compartido vive en global.css.
+*/
+
+
+
+  main {
+    padding-top: 100px;
+    /* espacio para navbar fija */
+  }
+  
+
+  /* Parallax-inicio  */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, rgba(231, 47, 47, 0.5), rgba(0, 0, 0, 0.7)); */
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .btn-quote {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #e72f2f;
+    /* boton cotizacion */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .btn-quote:hover {
+    background-color: #c62828;
+  }
+
+  /* Parallax Logo Styles */
+  .parallax-logo {
+    max-width: 200px;
+    /* Adjust based on your logo size */
+    position: relative;
+    z-index: 3;
+    /* Above overlay */
+  }
+
+  /* Variables de colores - modo claro por defecto */
+  :root {
+    --clr-bg: rgb(50, 20, 20);
+    --clr-text: #000000;
+    --clr-primary: rgb(118, 7, 7);
+    --clr-secondary: hsla(0, 100.00%, 98.20%, 0.72);
+
+    --clr-dropdown-bg: rgb(255, 255, 255);
+  }
+
+  /* Modo oscuro: sobreescribe variables */
+  .dark-mode {
+    --clr-bg: #121212;
+    --clr-text: #ffffff;
+    --clr-primary: rgb(231, 47, 47);
+    --clr-secondary: rgb(255, 255, 255);
+    --clr-navbar-bg: linear-gradient(90deg, hsla(0, 10.30%, 22.70%, 0.00) 0%, rgba(33, 37, 41, 0) 100%);
+    --clr-dropdown-bg: rgb(255, 255, 255);
+  }
+
+  #about .bg-light {
+    background-color: hsla(0, 76.80%, 27.10%, 0.79) !important;
+  }
+
+  /* Aplicación de variables */
+  body {
+    /* pantalla cambio de color */
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+  }
+
+  .navbar-custom {
+    /* nav convertir en transparente */
+    background: var(--clr-navbar-bg) !important;
+  }
+
+  /*  Sección informacion numerica */
+
+  #about .text-primary {
+    color: var(--clr-primary) !important;
+  }
+
+.gradient-text{
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+  /* Estilo del botón cotizar */
+  .btn-login {
+    width: 100%;
+    /* Ancho del botón */
+    padding: 12px;
+    /* Altura del botón */
+    background-color: #db5917;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+
+  /* ancho de lado derecho */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+  .ctr-container {
+    padding: 30px;
+    background-color: rgb(136, 21, 21);
+    /* Fondo específico para el contenedor */
+    border-radius: 10px;
+    /* Opcional: si quieres redondear los bordes del contenedor */
+  }
+
+  .ctr {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .btn-custom:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Filososfia */
+  .principle-card {
+    background: none;
+    border-left: 1px solid #444;
+    padding-left: 20px;
+  }
+
+  .principle-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .principle-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .principle-text {
+    color: #a0a0a0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* Galeria rotativa */
+  .section {
+    padding: 80px 0;
+    background: none;
+    /* EVITAR CONFLICTO CON ESTILOS */
+  }
+
+  .carousel-section {
+    padding: 20px 0;
+  }
+
+  .carousel-inner {
+    padding: 20px 0;
+  }
+
+  .carousel-item {
+    transition: transform 0.6s ease;
+  }
+
+  /* Stylish  */
+  .carousel-principle-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: border 0.4s ease, transform 0.4s ease;
+  }
+
+  .carousel-principle-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(219, 23, 23, 0.26), transparent);
+    animation: rotateBorder 8s infinite linear;
+    z-index: 0;
+  }
+
+  .carousel-principle-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(238, 5, 5, 0.79);
+    /* Subtle border highlight instead of glow */
+  }
+
+  @keyframes rotateBorder {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .carousel-principle-card .card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+  /* Imagen del carrusel (NO recortar el logo) */
+  .carousel-principle-card .carousel-image{
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+    filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
+  }
+  @media (max-width: 576px){
+    .carousel-principle-card{ height: 360px; }
+    .carousel-principle-card .carousel-image{ height: 220px; }
+  }
+
+
+  .carousel-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-principle-card:hover .carousel-placeholder {
+    background-color: #555;
+    /* Slight color change on hover for style */
+  }
+
+  .principle-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(234, 42, 42, 0.81);
+    transform: scale(1.1);
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #666;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-indicators .active {
+    background-color: rgb(219, 23, 23);
+    transform: scale(1.2);
+  }
+
+  /* PIE DE PAGINA */
+  .footer.footer-style3 {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    padding: 20px 100;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-style3 .footer-section {
+    padding: 7px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .footer-style3 .footer-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(243, 223, 9, 0.629);
+  }
+
+  .footer-style3 .nav-link {
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+  }
+
+  .footer-style3 .nav-link:hover {
+    color: #db5917;
+    text-decoration: underline;
+  }
+
+  .footer-style3 .subscribe-form input {
+    background: rgb(179, 21, 21);
+    border: 1px solid #09eb3e;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+
+  .footer-style3 .subscribe-form input:focus {
+    border-color: #00ffcc;
+    outline: none;
+  }
+
+  .btn-subscribe {
+    background: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .btn-subscribe:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .footer-style3 .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-style3 .social-icons a:hover {
+    color: #db5917;
+    transform: rotate(15deg);
+  }
+
+  .footer-style3 .copyright {
+    background: #121212;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+  }
+
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+    .hero {
+      height: 94vh;
+      /* Nota: este CSS vive en assets/css/, por eso usamos ../img */
+      background: url('../img/sai1.jpeg') no-repeat center center;
+      background-size: contain;
+      background-attachment: fixed;
+      background-color: #000;
+      /* Efecto parallax para el fondo */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+/* separador */
+  .separador {
+    border-top: 1px solid #cccccc05;
+    margin: 60px 0;
+  }
+
+  /* estilo de nav bar */
+  .navbar-custom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .navbar-brand img {
+    height: 2rem;
+    transition: height 0.7s ease;
+  }
+
+  .navbar-scrolled .navbar-brand img {
+    height: 35px;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
+
+  .clo {
+    color: #ffc107;
+  }
+
+  .theme-toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+
+  /* Parallax-inicio  */
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, rgba(231, 47, 47, 0.5), rgba(0, 0, 0, 0.7)); */
+    z-index: 1;
+  }
+
+  /* tipo de letra en parallax */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 90%;
+    /* Ensure it takes the full height of the hero section */
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(216, 13, 13, 0.97);
+  }
+
+  .btn-quote:hover {
+    background-color: #c62828;
+  }
+
+  .btn-quote {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: rgb(206, 0, 0);
+    /* boton cotizacion */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+
+  /* Parallax Logo Styles */
+  .parallax-logo {
+    max-width: 200px;
+    /* Adjust based on your logo size */
+    position: relative;
+    z-index: 3;
+    /* Above overlay */
+  }
+
+  /* Variables de colores - modo claro por defecto */
+  :root {
+    --clr-bg: rgba(202, 193, 193, 0.75);
+    --clr-text: rgb(0, 0, 0);
+    --clr-primary: rgb(172, 25, 25);
+
+
+    --clr-dropdown-bg: rgb(255, 255, 255);
+  }
+
+  /* Modo oscuro: sobreescribe variables */
+  .dark-mode {
+    --clr-bg: #121212;
+    --clr-text: #ffffff;
+    --clr-primary: rgb(231, 47, 47);
+    --clr-secondary: rgb(255, 255, 255);
+    --clr-navbar-bg: linear-gradient(90deg, hsla(0, 10.30%, 22.70%, 0.00) 0%, rgba(33, 37, 41, 0) 100%);
+    --clr-dropdown-bg: rgb(255, 255, 255);
+  }
+
+  /* color debajo de parlax */
+  #about .bg-light {
+    background-color: hsla(0, 76.80%, 27.10%, 0.79) !important;
+  }
+
+  /* Aplicación de variables */
+  body {
+    /* pantalla cambio de color */
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+  }
+
+  .navbar-custom {
+    /* nav convertir en transparente */
+    background: var(--clr-navbar-bg) !important;
+  }
+
+  /*  Sección informacion numerica */
+
+  #about .text-primary {
+    color: var(--clr-primary) !important;
+  }
+
+  /* cambio de color  */
+  .gradient-text {
+    background: -webkit-linear-gradient(45deg, rgb(71, 11, 11), rgb(206, 0, 0));
+ 
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  /* ancho de lado derecho */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+
+
+  .ctr {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .btn-custom:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Filososfia */
+  /* linea vertial filosofia */
+  .principle-card {
+    background: none;
+    border-left: 3px solid #444;
+    padding-left: 20px;
+  }
+
+
+
+  .principle-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .principle-text {
+
+    color: rgb(80, 78, 78);
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+
+  /* Galeria rotativa */
+  .section {
+    padding: 80px 0;
+    background: none;
+    /* EVITAR CONFLICTO CON ESTILOS */
+  }
+
+  .carousel-section {
+    padding: 20px 0;
+  }
+
+  .carousel-inner {
+    padding: 20px 0;
+  }
+
+  .carousel-item {
+    transition: transform 0.6s ease;
+  }
+
+  /* carusel  */
+  .carousel-principle-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: border 0.4s ease, transform 0.4s ease;
+  }
+
+  .carousel-principle-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(219, 23, 23, 0.26), transparent);
+    animation: rotateBorder 8s infinite linear;
+    z-index: 0;
+  }
+
+  .carousel-principle-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(238, 5, 5, 0.79);
+    /* bordados internos */
+  }
+
+  @keyframes rotateBorder {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .carousel-principle-card .card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+  /* Imagen del carrusel (NO recortar el logo) */
+  .carousel-principle-card .carousel-image{
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+    filter: drop-shadow(0 10px 22px rgba(0,0,0,0.45));
+  }
+  @media (max-width: 576px){
+    .carousel-principle-card{ height: 360px; }
+    .carousel-principle-card .carousel-image{ height: 220px; }
+  }
+
+
+  .carousel-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel-principle-card:hover .carousel-placeholder {
+    background-color: #555;
+    /* cambio de color*/
+  }
+
+  .principle-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(234, 42, 42, 0.81);
+    transform: scale(1.1);
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #666;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-indicators .active {
+    background-color: rgb(219, 23, 23);
+    transform: scale(1.2);
+  }
+
+  /* PIE DE PAGINA */
+
+  /* Importar fuente moderna para un diseño limpio */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  .footer-style3 {
+    /* Estilo principal del footer con gradiente gris y borde rojo */
+    background: linear-gradient(90deg, #252525, #151515);
+    color: #e5e5e5;
+    padding: 35px 0;
+    /* Reducido de 40px a 35px para menos altura vertical */
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid #ff3366;
+    /* Borde superior rojo */
+    font-family: 'Inter', sans-serif;
+  }
+
+  .footer-style3::before {
+    /* Efecto de resplandor radial en la esquina superior izquierda */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(143, 8, 42, 0.72), transparent 70%);
+    animation: pulseGlow 12s infinite;
+  }
+
+  .footer-style3::after {
+    /* Efecto de ola: capa de gradiente que se mueve horizontalmente en la parte inferior */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    /* Reducido de 15% a 12% para menos espacio vertical */
+    background: linear-gradient(to top, rgba(239, 25, 25, 1), transparent);
+    animation: wave 12s infinite ease-in-out;
+  }
+
+  .footer-section {
+    /* Estilo de cada sección del footer */
+    padding: 12px;
+    /* Reducido de 15px a 12px para menos altura */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* Reducido de 12px para un look más compacto */
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-section:hover {
+    /* Efecto de pop-up al pasar el cursor: escala y sombra roja */
+    background: rgba(205, 19, 66, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(255, 51, 102, 0.3);
+  }
+
+  .footer-section h5 {
+    /* Títulos de las secciones */
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1rem;
+    /* Reducido de 1.1rem para menos altura */
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    /* Reducido de 8px */
+  }
+
+  .footer-style3 .nav-link {
+    /* Enlaces dentro de las secciones */
+    color: #a39a9aff;
+    font-size: 0.8rem;
+    /* Reducido de 0.85rem */
+    transition: color 0.3s ease;
+    line-height: 1.3;
+    /* Reducido para menos espacio vertical */
+  }
+
+  .footer-style3 .nav-link:hover {
+    /* Efecto al pasar el cursor sobre enlaces */
+    color: #d81c4bff;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+  }
+
+  .subscribe-form .btn-quote {
+    /* Botones de Políticas y Cotización */
+    background: #ff3366;
+    border: none;
+    padding: 6px 18px;
+    /* Reducido de 8px 20px */
+    border-radius: 20px;
+    /* Reducido de 25px */
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    /* Reducido de 0.85rem */
+    transition: all 0.3s ease;
+  }
+
+
+
+  .copyright {
+    /* Sección de derechos reservados */
+    background: #101010;
+    padding: 8px 0;
+    /* Reducido de 10px a 8px */
+    text-align: center;
+    font-size: 0.75rem;
+    /* Reducido de 0.8rem */
+    color: #b5b5b5;
+    border-top: 1px solid rgba(255, 51, 102, 0.2);
+    margin-top: 15px;
+    /* Reducido de 20px */
+  }
+
+  .social-icons a {
+    /* Iconos de redes sociales */
+    color: #e5e5e5;
+    font-size: 1.3rem;
+    /* Reducido de 1.4rem */
+    margin: 0 10px;
+    /* Reducido de 12px */
+    transition: all 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    /* Efecto al pasar el cursor sobre iconos */
+    color: #ff3366;
+    transform: translateY(-5px) scale(1.1);
+    text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+  }
+
+  @keyframes pulseGlow {
+
+    /* Animación de resplandor para el fondo radial de lado izquierdo */
+    0% {
+      opacity: 0.5;
+    }
+
+    50% {
+      opacity: 610;
+    }
+
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes wave {
+
+    /* Animación de barra horizontal en movimiento" */
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(49rem);
+    }
+
+    90% {
+      transform: translateX(0);
+    }
+  }
+
+  .pulse {
+    /* Animación de pulsación para botones */
+    animation: pulse 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+
+    /* Definición de la animación de pulsación */
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.08);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .footer-section {
+      margin-bottom: 12px;
+      /* Reducido de 15px */
+      padding: 10px;
+      /* Reducido de 12px */
+    }
+
+    .subscribe-form {
+      flex-direction: column;
+      gap: 6px;
+      /* Reducido de 8px */
+    }
+
+    .subscribe-form .btn-quote {
+      width: 100%;
+      text-align: center;
+      padding: 5px 12px;
+      /* Reducido para móvil */
+    }
+
+    .footer-style3 {
+      padding: 25px 0;
+      /* Reducido de 30px para móvil */
+    }
+  }
+
+  /* fin de pie de pagina */
+
+
+@media (max-width: 768px){
+  .hero{ background-attachment: scroll; height: 70vh; }
+  .hero-content h1{ font-size: 2.2rem; }
+}

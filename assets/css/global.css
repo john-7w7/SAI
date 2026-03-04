@@ -1,0 +1,339 @@
+:root{
+  --clr-primary: #e11717;
+  --bg-0: #000000;
+  --text-0: rgba(255,255,255,0.92);
+  --text-1: rgba(255,255,255,0.70);
+  --border-0: rgba(255,255,255,0.12);
+  --glass-0: rgba(255,255,255,0.06);
+}
+
+/* Tema claro (día) */
+html.theme-light{
+  --bg-0: #f2f2f5;
+  --text-0: rgba(0,0,0,0.92);
+  --text-1: rgba(0,0,0,0.65);
+  --border-0: rgba(0,0,0,0.12);
+  --glass-0: rgba(0,0,0,0.04);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  color: var(--text-0);
+  background: var(--bg-0);
+}
+
+/* Modo oscuro: negro total */
+html:not(.theme-light) body{
+  background: #000 !important;
+}
+
+
+html.theme-light body{
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(225,23,23,0.10), transparent 55%),
+    radial-gradient(1000px 700px at 80% 20%, rgba(0,0,0,0.04), transparent 55%),
+    var(--bg-0);
+}
+
+/* Common */
+a{ color: inherit; text-decoration: none; }
+a:hover{ color: var(--text-0); }
+
+.separador{
+  height: 1px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, rgba(225,23,23,0.55), transparent);
+  opacity: .95;
+}
+
+.gradient-text{
+  background: linear-gradient(90deg, #ffffff, rgba(225,23,23,0.95));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navbar */
+.navbar-custom{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10,10,14,0.55);
+  border-bottom: 1px solid var(--border-0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Botón sol/luna */
+.theme-toggle-btn{
+  background: transparent;
+  border: 1px solid var(--border-0);
+  color: var(--text-0);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+.theme-toggle-btn:hover{
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+html.theme-light .theme-toggle-btn:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* Color del ícono para que “se sienta” día/noche */
+html:not(.theme-light) .theme-toggle-btn i{ color: #ffd36b; }
+html.theme-light .theme-toggle-btn i{ color: #1b1f2a; }
+.navbar-custom .navbar-brand{
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.navbar-custom .nav-link{
+  color: var(--text-1);
+  position: relative;
+  padding: .55rem .95rem;
+  border-radius: 999px;
+  transition: color .25s ease, background-color .25s ease, transform .25s ease;
+}
+.navbar-custom .nav-link:hover{
+  color: var(--text-0);
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-1px);
+}
+.navbar-custom .nav-link::after{
+  content:"";
+  position:absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 8px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(225,23,23,0.9), transparent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.navbar-custom .nav-link:hover::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+.footer{
+  margin-top: 72px;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid var(--border-0);
+}
+.footer .footer-muted{ color: var(--text-1); }
+.footer .footer-link{
+  color: var(--text-1);
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+}
+.footer .footer-link:hover{ color: var(--text-0); }
+.footer .copyright{
+  border-top: 1px solid var(--border-0);
+  color: var(--text-1);
+  background: rgba(0,0,0,0.25);
+}
+
+/* ===== Footer estilo "SAI" (global, sin romper el navbar de arriba) ===== */
+.footer.footer-style3{
+  background: linear-gradient(90deg, #252525, #151515);
+  color: #e5e5e5;
+  padding: 35px 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #ff3366;
+}
+.footer.footer-style3::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(143, 8, 42, 0.72), transparent 70%);
+  animation: saiPulseGlow 12s infinite;
+  pointer-events: none;
+}
+.footer.footer-style3::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12%;
+  background: linear-gradient(to top, rgba(239, 25, 25, 1), transparent);
+  animation: saiWave 12s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.footer.footer-style3 .footer-section{
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+.footer.footer-style3 .footer-section:hover{
+  background: rgba(205, 19, 66, 0.3);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 51, 102, 0.3);
+}
+
+.footer.footer-style3 .footer-section h5{
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Importante: scoped al footer para NO afectar .navbar-custom */
+.footer.footer-style3 .nav-link{
+  color: #a39a9a;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+  padding: 0;
+}
+.footer.footer-style3 .nav-link:hover{
+  color: #d81c4b;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+}
+
+.footer.footer-style3 .subscribe-form .btn-quote{
+  background: #ff3366;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.footer.footer-style3 .social-icons a{
+  color: #e5e5e5;
+  font-size: 1.3rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+.footer.footer-style3 .social-icons a:hover{
+  color: #ff3366;
+  transform: translateY(-5px) scale(1.1);
+  text-shadow: 0 0 5px rgba(255, 51, 102, 0.5);
+}
+
+.footer.footer-style3 .copyright{
+  background: #101010;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #b5b5b5;
+  border-top: 1px solid rgba(255, 51, 102, 0.2);
+  margin-top: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer.footer-style3 .pulse{
+  animation: saiPulse 2s infinite ease-in-out;
+}
+
+@keyframes saiPulseGlow{
+  0%{ opacity: 0.5; }
+  50%{ opacity: 0.9; }
+  100%{ opacity: 0.5; }
+}
+@keyframes saiWave{
+  0%{ transform: translateX(0); }
+  50%{ transform: translateX(49rem); }
+  90%{ transform: translateX(0); }
+}
+@keyframes saiPulse{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.08); }
+  100%{ transform: scale(1); }
+}
+
+@media (max-width: 768px){
+  .footer.footer-style3{ padding: 25px 0; }
+  .footer.footer-style3 .footer-section{ margin-bottom: 12px; padding: 10px; }
+  .footer.footer-style3 .subscribe-form{ flex-direction: column; gap: 6px; }
+  .footer.footer-style3 .subscribe-form .btn-quote{ width: 100%; text-align: center; padding: 5px 12px; }
+}
+
+/* ===== Inputs / placeholders (global) ===== */
+input, textarea, select{
+  color: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+input:focus, textarea:focus, select:focus{
+  border-color: rgba(225,23,23,0.65);
+  box-shadow: 0 0 0 4px rgba(225,23,23,0.15);
+  background: rgba(255,255,255,0.08);
+}
+::placeholder{
+  color: rgba(255,255,255,0.45);
+}
+
+
+/* Tipografía: asegúrate que en oscuro todo se lea */
+h1,h2,h3,h4,h5,h6{ color: var(--text-0); }
+p,li,small,span{ color: var(--text-1); }
+
+/* Bootstrap helpers: en oscuro evita fondos claros */
+html:not(.theme-light) .bg-white,
+html:not(.theme-light) .bg-light{
+  background-color: #000 !important;
+}
+html:not(.theme-light) .text-dark{
+  color: var(--text-0) !important;
+}
+
+/* Clases tipo tailwind usadas en el layout */
+html:not(.theme-light) .text-gray-500{ color: var(--text-1) !important; }
+
+
+/* Forzar componentes a negro en modo oscuro */
+html:not(.theme-light) .navbar-custom{
+  background: rgba(0,0,0,0.85);
+}
+html:not(.theme-light) .footer,
+html:not(.theme-light) .footer.footer-style3{
+  background: #000;
+}
+html:not(.theme-light) .footer.footer-style3{
+  border-top-color: #ff3366;
+}
+html:not(.theme-light) .footer.footer-style3::before,
+html:not(.theme-light) .footer.footer-style3::after{
+  opacity: 0; /* sin brillos si quieres negro puro */
+}
+
+/* Bootstrap helpers en oscuro */
+html:not(.theme-light) .bg-white,
+html:not(.theme-light) .bg-light{
+  background-color: #000 !important;
+}
+html:not(.theme-light) .text-dark,
+html:not(.theme-light) .text-black{
+  color: #fff !important;
+}
+html:not(.theme-light) .text-muted{
+  color: rgba(255,255,255,0.72) !important;
+}
+html:not(.theme-light) .shadow{
+  box-shadow: 0 12px 30px rgba(0,0,0,0.65) !important;
+}

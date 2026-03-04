@@ -1,0 +1,147 @@
+<?php $pageCss = 'nosotros'; ?>
+<!doctype html>
+<html lang="es">
+<?php include __DIR__ . '/partials/head.php'; ?>
+<body>
+  <?php include __DIR__ . '/partials/navbar.php'; ?>
+
+  <!-- Sección de héroe -->
+    <section class="hero">
+      <div class="hero-content">
+        <!-- Título principal con animación AOS -->
+        <h1 data-aos="fade-up" data-aos-delay="200">Sistemas Automáticos e Instrumentación</h1>
+        <!-- Descripción breve con animación AOS -->
+        <!-- <p data-aos="fade-up" data-aos-delay="200"> Tecnología que Transforma</p> -->
+      </div>
+    </section>
+  
+
+  <!-- Acerca de A quien nos dirigimos -->
+  
+ <section class="offices-section" data-aos="fade-up" data-aos-duration="1">
+  
+    <div class="py-5">
+      <div class="container py-5">
+        <div class="row align-items-center g-md-5 g-4">
+          <div class="col-lg-6 col-10">
+            <div class="info-text bg-white shadow p-4 rounded">
+              <p class="section-label" data-aos="fade-right" data-aos-delay="100">[ Primero ]</p>
+              <h2 class="pb-2 display-4 text-muted" data-aos="fade-right">
+                <br>
+                <span class=".gradient-text fw-bold">A donde vamos dirigidos</span>
+              </h2>
+              <h2 class="text-2xl text-black" data-aos="fade-right"> Somos un equipo que conforman un sin fin de ramas de
+                Automatización 360°  de procesos y máquinas, Integración de sistemas de control, Programación de PLCs,
+              Programación de HMIs, Control de movimiento, Programación de sistemas de visión, Consultoría.
+              </h2>
+            </div>
+          </div>
+          <div class="image-content">
+            <img src="assets/img/sai2.png" alt="Collaboration Image" class="custom-image" onclick="toggleInfo()"
+              data-aos="fade-left" data-aos-delay="200">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+</section>
+
+  <!-- Sección de valores -->
+  <section class="offices-section">
+    <div class="content">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-12 ruling-2 mb-12">
+        <!-- Parte izquierda: Descripción de la valores -->
+        <div class="md:w-1/2">
+          <p class="section-label" data-aos="fade-up">[ secundario ]</p>
+          <h1>Valores</h1>
+        </div>
+
+
+        <div class="md:w-1/2 grid grid-cols-1 gap-8">
+          <!-- Tarjeta de innovacion -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-rocket principle-icon"></i>
+            <h3 class="principle-title">Innovación</h3>
+            <p class="text-3xl">
+              Buscamos nuevas ideas creativas que tengan el potencial de cubrir las necesidades de nuestros clientes.
+            </p>
+          </div>
+          <!-- Tarjeta de compromiso -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-eye principle-icon"></i>
+            <h3 class="principle-title">Compromiso</h3>
+            <p class="text-3xl">
+              Nos caracteriza cumplir con los objetivos pactados con la aptitud de firmeza, seguridad y confianza.
+            </p>
+          </div>
+          <!-- Tarjeta de integridad -->
+          <div class="principle-card" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-bolt principle-icon"></i>
+            <h3 class="principle-title">Integridad</h3>
+            <p class="text-3xl">
+              Siendo fieles a nuestros propios principios actuamos con honestidad y honor sin comprometer la verdad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Acerca de nosotros -->
+  <section class="offices-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="content">
+      <div class="text-content">
+        <p class="section-label" data-aos="fade-right" data-aos-delay="100">[ tercero ]</p>
+        <h1 data-aos="fade-right" data-aos-delay="200">Acerca de nosotros</h1>
+        <p class="text-2xl" data-aos="fade-right" data-aos-delay="300">
+          Sistemas Automáticos e Instrumentación S.A. de C.V. es una empresa mexicana con más de 20 años de
+          experiencia colectiva en automatización industrial. Ofrecemos soluciones 360° en ingeniería para sectores
+          como metalmecánica.
+        </p>
+        <button class="view-roles-btn" onclick="toggleInfo()" data-aos="fade-up" data-aos-delay="400">VER MÁS</button>
+
+        <!-- Caja desplegable -->
+        <div class="info-box" id="infoBox" data-aos="zoom-in" data-aos-delay="500">
+          <button class="close-btn" onclick="closeInfo(event)">×</button>
+          <h2 data-aos="fade-down" data-aos-delay="600">Más de nosotros</h2>
+          <p data-aos="fade-down" data-aos-delay="700">
+            Nos destacamos en sectores como la industria, con servicios como reconstrucción de
+            maquinaria de sensores, retrofit de sistemas de control, retrofit de instrumentación, configuración y
+            parametrización de drives,
+            suministro de componentes de eléctricos, neumáticos, componentes de control e instrumentos de medición,
+            consultoría para selección
+            de equipo industrial, maquinados de precisión y outsourcing especializado.
+          </p>
+          <p data-aos="fade-down" data-aos-delay="800">
+            Nuestro diferencial: combinamos robustez técnica con enfoque creativo para desarrollar sistemas
+            personalizados. Apuntamos a ser líderes nacionales con soluciones que superen expectativas, compromiso de
+            mejora continua y atención a las necesidades futuras del sector industrial.
+          </p>
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="assets/img/sai2.png" alt="Collaboration Image" class="custom-image" onclick="toggleInfo()"
+          data-aos="fade-left" data-aos-delay="200">
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador visual entre secciones -->
+  <div class="separador"></div>
+
+  <!-- Pie de página -->
+
+  <!-- Script para cambio de tema claro/oscuro y animaciones -->
+  
+
+
+  <!-- Estilos personalizados -->
+<!-- el camio de color de teto -->
+<!-- class="text-3xl"> -->
+<?php include __DIR__ . '/partials/footer.php'; ?>
+  <?php include __DIR__ . '/partials/scripts.php'; ?>
+  <?php include __DIR__ . '/assets/js/nosotros.js'; ?>
+</body>
+</html>
