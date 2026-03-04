@@ -18,3 +18,5 @@ En cada página solo se carga:
 - su <pagina>.css (desde la misma página)
 
 - Todo con finalidad de volver a estructurar para tener una limpia y prefecional pilares y estructuras.
+
+deploy fix 
