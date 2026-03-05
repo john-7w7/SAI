@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/inicio"
+  to = "/index.html"
+  status = 301

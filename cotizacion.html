@@ -1,9 +1,49 @@
-<?php $pageCss = 'cotizacion'; ?>
 <!doctype html>
 <html lang="es">
-<?php include __DIR__ . '/partials/head.php'; ?>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cotización | SAI</title>
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/cotizacion.css">
+</head>
 <body>
-  <?php include __DIR__ . '/partials/navbar.php'; ?>
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2 brand-link" href="index.html"><img src="assets/img/sai2.png" alt="SAI" class="brand-logo" width="42" height="42" loading="eager" /></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="cotizacion.html">Cotización</a></li>
+        
+
+        <!-- Botón de tema (día/noche) -->
+        <li class="nav-item d-flex align-items-center">
+          <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Cambiar a modo claro">
+            <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
 
   <!-- Sección de héroe con efecto parallax -->
     <section class="hero">
@@ -31,7 +71,107 @@
   <!-- Estilos personalizados -->
 <!-- el camio de color de teto -->
 <!-- class="text-3xl"> -->
-<?php include __DIR__ . '/partials/footer.php'; ?>
-  <?php include __DIR__ . '/partials/scripts.php'; ?>
+</main>
+
+<footer class="footer footer-style3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 footer-section animate__animated animate__fadeInUp">
+        <h5>Sección 1</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="politica.html" class="nav-link">Política</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 footer-section animate__animated animate__fadeInUp" data-delay="200">
+        <h5>Sección 2</h5>
+        <ul class="list-unstyled">
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 footer-section animate__animated animate__fadeInUp" data-delay="400">
+        <h5>Sección 3</h5>
+        <ul class="list-unstyled">
+          <li><a href="servicios.html" class="nav-link">Servicio</a></li>
+          <li><a href="cotizacion.html" class="nav-link">Cotizar</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 footer-section animate__animated animate__fadeInUp" data-delay="600">
+        <h5>Gracias por formar Parte de SAI</h5>
+        
+        <div class="subscribe-form d-flex gap-2">
+          <a href="politica.html" class="btn btn-quote pulse">Políticas</a>
+          <a href="cotizacion.html" class="btn btn-quote pulse">Cotización</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright mt-2">
+    <p>© <span id="year"></span> SAI, Inc. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Vendor JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  if (window.AOS) AOS.init({ once: true, duration: 800, offset: 80 });
+</script>
+
+<script>
+  // ===== Tema día / noche (persistente) =====
+  (function(){
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    if(!btn) return;
+
+    const ICON_SUN = '<i class="fa-solid fa-sun" aria-hidden="true"></i>';
+    const ICON_MOON = '<i class="fa-solid fa-moon" aria-hidden="true"></i>';
+
+    function applyTheme(theme){
+      const isLight = theme === 'light';
+      root.classList.toggle('theme-light', isLight);
+      btn.innerHTML = isLight ? ICON_MOON : ICON_SUN;
+      btn.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+    }
+
+    // Cargar preferencia
+    const saved = localStorage.getItem('sai-theme');
+    if(saved === 'light' || saved === 'dark'){
+      applyTheme(saved);
+    }else{
+      // Si no hay preferencia guardada, inicia en oscuro
+      applyTheme('dark');
+    }
+
+    btn.addEventListener('click', function(){
+      const next = root.classList.contains('theme-light') ? 'dark' : 'light';
+      localStorage.setItem('sai-theme', next);
+      applyTheme(next);
+    });
+  })();
+</script>
+
+<script>
+  // Año dinámico en el footer
+  const y = document.getElementById('year');
+  if(y) y.textContent = new Date().getFullYear();
+</script>
+
+<script>
+  // Navbar: estilo al hacer scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar-custom');
+    if(!navbar) return;
+    navbar.classList.toggle('navbar-scrolled', window.scrollY > 60);
+  });
+</script>
+
 </body>
 </html>
+
+

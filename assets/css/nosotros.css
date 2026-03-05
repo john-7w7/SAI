@@ -566,3 +566,9 @@
     font-size: 1.7rem;
     line-height: 1.6;
   }
+
+/* Force readable text in the 'Ver más' card */
+.info-box,
+.info-box *{
+  color:#f2f2f2 !important;
+}

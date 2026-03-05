@@ -997,3 +997,11 @@
   .hero{ background-attachment: scroll; height: 70vh; }
   .hero-content h1{ font-size: 2.2rem; }
 }
+
+/* ---- Netlify/static fixes: hero full + no blank gap ---- */
+main{ padding-top: 0 !important; }
+.hero{
+  height: 100vh !important;
+  background-size: cover !important;
+  background-position: center top !important;
+}
