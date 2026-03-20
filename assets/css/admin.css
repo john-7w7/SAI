@@ -1,0 +1,20 @@
+.admin-body{min-height:100vh;background:#0b0b0f;color:#fff}
+.admin-login-shell{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at top, rgba(225,23,23,.22), transparent 35%), #09090d}
+.admin-login-card{width:min(100%,420px);padding:32px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(255,255,255,.04);backdrop-filter:blur(14px)}
+.admin-logo,.admin-side-logo{width:76px;height:76px;object-fit:contain;margin-bottom:10px}
+.admin-layout{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+.admin-sidebar{padding:28px 20px;background:linear-gradient(180deg,#530000,#1a0b0b);border-right:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;justify-content:space-between}
+.admin-sidebar h2{margin:8px 0 0;font-size:1.7rem}.admin-sidebar p{color:rgba(255,255,255,.72)}
+.admin-nav a{display:flex;gap:10px;align-items:center;padding:13px 14px;border-radius:14px;color:#fff;background:rgba(255,255,255,.05);margin-bottom:10px}
+.admin-nav a.active{background:linear-gradient(135deg,#d10000,#690000)}
+.admin-main{padding:28px;background:#f4f5f8;color:#111}
+.admin-topbar h1{font-size:2rem;margin:0 0 4px}.admin-topbar p{color:#666}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+.stat-box{border-radius:20px;padding:20px;color:#fff;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.stat-box span{display:block;font-weight:700}.stat-box strong{display:block;font-size:2rem;margin-top:6px}.naranja{background:#f59e0b}.amarillo{background:#facc15;color:#111}.azul{background:#3b82f6}.rojo{background:#ef4444}
+.table-wrap{background:#fff;border-radius:20px;padding:16px;box-shadow:0 12px 28px rgba(0,0,0,.08);overflow:auto}
+.admin-table th{white-space:nowrap}.td-description{min-width:220px;max-width:320px}.estado-select{min-width:145px;font-weight:700;border:none}.estado-enviado{background:#f59e0b;color:#fff}.estado-autorizado{background:#facc15;color:#111}.estado-facturado{background:#3b82f6;color:#fff}.estado-cancelado{background:#ef4444;color:#fff}
+@media (max-width: 991px){.admin-layout{grid-template-columns:1fr}.admin-sidebar{gap:20px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width: 575px){.stats-grid{grid-template-columns:1fr}.admin-main{padding:16px}.admin-login-card{padding:22px}}
+
+.urgency-badge{display:inline-flex;align-items:center;justify-content:center;padding:6px 12px;border-radius:999px;font-weight:700;font-size:.84rem;white-space:nowrap}.urgency-badge.urgente{background:#fee2e2;color:#b91c1c}.urgency-badge.normal{background:#e5e7eb;color:#374151}

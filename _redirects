@@ -1,1 +1,4 @@
-/inicio    /index.html   301
+/inicio /index.html 301
+/sai-admin-privado /sai-admin-privado/login.html 200
+/sai-admin-privado/login /sai-admin-privado/login.html 200
+/sai-admin-privado/panel /sai-admin-privado/panel.html 200
